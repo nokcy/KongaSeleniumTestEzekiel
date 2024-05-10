@@ -20,6 +20,7 @@ public class LoginTest {
 * Select an address and continue to payment.
 * Choose the card payment method.
 * Input invalid card details (e.g., invalid card number, expiry date, and CVV).
+* test data: 0199 1209 8658 7854 - 10/25 - 122 - 8725
 * Attempt to submit the payment.
 * Verify that an error message is displayed indicating "Invalid card number".
 * Close the iFrame containing the card input modal.
@@ -87,21 +88,40 @@ public class LoginTest {
 
         // click on the PAY NOW
         this.driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div/form/div/div[1]/section[2]/div/div[2]/div[1]/div[1]/span")).click();
-        Thread.sleep(90000L);
+        Thread.sleep(80000L);
 
 
 
         // click on the Continue TO PAYMENT
         this.driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div/form/div/div[1]/section[2]/div/div[2]/div[3]/div[2]/div/button")).click();
-        Thread.sleep(90000L);
+        Thread.sleep(80000L);
 
 
-
-
-        // click on the card option
+        // click on the card option iframe
         driver.switchTo().frame("kpg-frame-component");
         this.driver.findElement(By.xpath("//*[@id=\"channel-template\"]/div[2]/div/div[2]/button/div")).click();
+        Thread.sleep(80000L);
+
+
+        // Card Details into iframe
+       // driver.switchTo().frame("kpg-frame-component");
+        this.driver.findElement(By.id("card-number")).sendKeys("0199 1209 8658 7854");
+      //  Thread.sleep(5000L);
+      //  this.driver.findElement(By.id("expiry")).sendKeys("10/25");
+      //  Thread.sleep(5000L);
+     //   this.driver.findElement(By.id("cvv")).sendKeys("122");
+      //  Thread.sleep(5000L);
+      //  this.driver.findElement(By.id("card-pin-new")).click();
+      //  Thread.sleep(5000L);
+     //   this.driver.findElement(By.xpath("//*[@id=\"keypads\"]/button[1]")).click();
+
         Thread.sleep(500000L);
+
+
+
+
+
+
 
 
 // click on the seselct paymewnt
