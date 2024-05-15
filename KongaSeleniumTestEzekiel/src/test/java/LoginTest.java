@@ -59,11 +59,27 @@ public class LoginTest {
 
         // Click on the login button and wait for 5 seconds
         this.driver.findElement(By.xpath("//*[@id=\"app-content-wrapper\"]/div[4]/section/section/aside/div[2]/div/form/div[3]/button")).click();
-        Thread.sleep(5000L);
+        Thread.sleep(9000L);
+
+
+        // capture error message and store in a variable actual_msg1 and wait for 9seconds
+        String actual_msg1=driver.findElement(By.xpath("//*[@id=\"nav-bar-fix\"]/div[1]/div/div/div[4]/div/a/span")).getText();
+        Thread.sleep(9000L);
+        // Store message in a variable and wait 9 seconds
+        String expect1="My Account";
+        Thread.sleep(9000L);
+
+
+        // Verify error message
+        Assert.assertEquals(actual_msg1, expect1);
+        // Display on console the message below and wait 9 seconds
+        System.out.println("The user is login successfully: "+ actual_msg1+ " is displayed on his Dashboard");
+        Thread.sleep(9000L);
+
 
         // Navigate to Computers and Accessories category and wait for 5 seconds
         this.driver.findElement(By.xpath("//*[@id=\"nav-bar-fix\"]/div[2]/div/a[2]")).click();
-        Thread.sleep(5000L);
+        Thread.sleep(7000L);
 
         // Click on Laptops subcategory and wait for 5 seconds
         this.driver.findElement(By.xpath("//*[@id=\"mainContent\"]/section[3]/section/div/section/div[2]/div[2]/ul/li[4]/a/label/span")).click();
@@ -110,12 +126,12 @@ public class LoginTest {
         Thread.sleep(5000L);
         //Input Card cvv and wait for 5 seconds
         this.driver.findElement(By.id("cvv")).sendKeys("122");
-        Thread.sleep(5000L);
-
-
-        //// Attempt to submit the payment and wait for 5 seconds
-        this.driver.findElement(By.id("validateCardForm")).click();
         Thread.sleep(50000L);
+
+
+        // Attempt to submit the payment and wait for 5 seconds
+        this.driver.findElement(By.id("validateCardForm")).click();
+        Thread.sleep(5000L);
 
 
         // capture error message and store in a variable actual_msg and wait for 10 seconds
