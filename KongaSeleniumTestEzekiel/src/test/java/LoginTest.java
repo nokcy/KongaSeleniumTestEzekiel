@@ -16,10 +16,6 @@ public class LoginTest {
     /* ---------------------DOCUMENTATION------------------
      * STEP TO ARCHIVE THE TASK
      * Open the Konga website.
-     * Sign in to Konga with valid credentials voxaja1374@rencr.com AND voxaja1374@
-     * https://temp-mail.org/en/view/663be0998848d004b582808e
-     * Navigate to the "Computers and Accessories" category.
-     * Click on the "Laptops" subcategory.
      * Click on the "Apple MacBooks" product category.
      * Add a MacBook product to the cart.
      * Proceed to checkout.
@@ -56,11 +52,11 @@ public class LoginTest {
             Thread.sleep(5000L);
 
             // Enter an existing Email address and wait for 5 seconds
-            this.driver.findElement(By.name("username")).sendKeys("voxaja1374@rencr.com");
+            this.driver.findElement(By.name("username")).sendKeys("XXXXX@rencr.com");
             Thread.sleep(5000L);
 
             //Enter Password for the Email above and wait for 5 seconds
-            this.driver.findElement(By.name("password")).sendKeys("voxaja1374@");
+            this.driver.findElement(By.name("password")).sendKeys("vXXXXXX4@");
             Thread.sleep(5000L);
 
             // Click on the login button and wait for 5 seconds
